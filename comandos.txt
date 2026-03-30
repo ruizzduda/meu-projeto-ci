@@ -1,0 +1,50 @@
+  177  rm hello.yml/
+  178  rm -r hello.yml/ workflows/
+  179  ls -la
+  180  cd .github/
+  181  ls
+  182  mkdir workflows
+  183  cd workflows/
+  184  nano hello.yml
+  185  act -l
+  186  cd ../..
+  187  ls
+  188  act -l
+  189  act workflow_dispatch -q
+  190  mkdir meu-projeto-ci
+  191  cd meu-projeto-ci
+  192  git init
+  193  touch README.md
+  194  git add .
+  195  git commit -m "commit inicial"
+  196  mkdir -p .github/workflows
+  197  docker --version
+  198  act --version
+  199  .github/workflows/01-hello-local.yml
+  200  cd meu-projeto-ci
+  201  mkdir -p .github/workflows
+  202  nano .github/workflows/01-hello-local.yml
+  203  tree
+  204  snap info tree
+  205  act -l
+  206  act -n
+  207  act -l
+  208  act -W .github/workflows/02-pipeline-principal.yml -P ubuntu-latest=node:slim
+  209  ls .github/workflows
+  210  nano .github/workflows/02-pipeline-principal.yml
+  211  ls .github/workflows
+  212  act -W .github/workflows/02-pipeline-principal.yml -P ubuntu-latest=node:slim
+  213  git remote add origin git@github.com:ruizzduda/meu-projeto-ci.git
+  214  git branch -M main
+  215  ls -R
+  216  git branch -M main
+  217  git remote -v
+  218  git add .
+  219  git commit -m "Subindo projeto final"
+  220  git config --global user.name "Maria Eduarda"
+  221  git config --global user.email "maria.ruiz@aluno.impacta.edu.br"
+  222  git add .
+  223  git commit -m "Subindo projeto final"
+  224  git push -u origin main
+  225  git config --global --list
+  226  history 50 > comandos.txt
